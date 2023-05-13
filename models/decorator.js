@@ -6,8 +6,11 @@ Decorator.prototype.addPaintToStock = function(newPaint){
     this.paintStock.push(newPaint);
 }
 
-Decorator.prototype.totalVolumeOfPaint = function(nextPaint){
-    this.paintStock.currentVolume.reduce((count, nextPaint) => count + nextPaint.currentVolume, 0);
+///// not currently working
+Decorator.prototype.totalVolumeOfPaint = function(){
+    return this.paintStock.reduce((totalPaint, paint) => {
+        return totalPaint += paint.currentVolume;
+    }, 0);
 }
 
 module.exports = Decorator;
