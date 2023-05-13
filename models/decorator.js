@@ -2,11 +2,12 @@ const Decorator = function(){
     this.paintStock = [] 
 }
 
+// function 1
 Decorator.prototype.addPaintToStock = function(newPaint){
     this.paintStock.push(newPaint);
 }
 
-///// not currently working
+// function 2
 Decorator.prototype.totalVolumeOfPaint = function(){
     return this.paintStock.reduce((totalPaint, paint) => {
         return totalPaint += paint.currentVolume;

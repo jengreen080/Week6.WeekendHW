@@ -3,6 +3,7 @@ const Paint = function(capacity, currentVolume){
     this.currentVolume = currentVolume;
 }
 
+// function 1
 Paint.prototype.checkIfPaintIsEmpty = function(){
     if (this.currentVolume === 0) {
         return "empty"
