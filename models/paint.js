@@ -3,7 +3,7 @@ const Paint = function(capacity, currentVolume){
     this.currentVolume = currentVolume;
 }
 
-// function 1
+// Paint function 1
 Paint.prototype.checkIfPaintIsEmpty = function(){
     if (this.currentVolume === 0) {
         return "empty"
@@ -11,5 +11,13 @@ Paint.prototype.checkIfPaintIsEmpty = function(){
         return "not empty"
     }
 }
+
+// Paint function 2
+Paint.prototype.emptyThePaint = function(){
+    if (this.currentVolume > 0) {
+        this.currentVolume = 0
+    }
+}
+
 
 module.exports = Paint;

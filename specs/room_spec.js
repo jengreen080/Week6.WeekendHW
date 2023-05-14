@@ -6,22 +6,29 @@ describe('Room', function(){
     let room;
 
     beforeEach(function (){
-        room = new Room();
+        room = new Room(10, 0);
 
     });
 
 //Example 9
-    xit('should have an area in square meters', function (){
+    it('should have an area in square meters', function (){
+        const expected = 10
+        const actual = room.area
         assert.strictEqual(actual, expected);
     })
 
 //Example 10
-    xit('should start not painted', function (){
+    it('should start not painted', function (){
+        const expected = 0
+        const actual = room.areaPainted
         assert.strictEqual(actual, expected);
     })
 
 //Example 11
-    xit('should be able to be painted', function (){
+    it('should be able to be painted', function (){
+        room.paintTheRoom(5)
+        const expected = 5
+        const actual = room.areaPainted
         assert.strictEqual(actual, expected);
     })
 })
